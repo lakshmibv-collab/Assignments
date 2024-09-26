@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap");
+
+:root {
+  --red: orange;
+}
+
+* {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+/* *::selection {
+  background: var(--red);
+  color: #fff;
+} */
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background: green;
+}
+
+section {
+  padding: 2rem 9%;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  border: 0.2rem solid var(--red);
+  color: var(--red);
+  cursor: pointer;
+  font-size: 1.7rem;
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 1rem;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 2rem 9%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: #666;
+}
+
+header .logo i {
+  padding-right: 0.5rem;
+  color: var(--red);
+}
+
+header .navbar a {
+  font-size: 2rem;
+  margin-left: 2rem;
+  color: orangered;
+}
+
+header .navbar a:hover {
+  color: var(--red);
+}
+
+#menu-bar {
+  font-size: 3rem;
+  cursor: pointer;
+  color: #666;
+  border: 0.1rem solid #666;
+  border-radius: 0.3rem;
+  padding: 0.5rem 1.5rem;
+  display: none;
+}
+
+.home {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  min-height: 100vh;
+  align-items: center;
+  background: url(../images/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+  padding-top: 6.5rem;
+}
+/* .home .content :hover {
+  color: orange;
+} */
+
+.home .image {
+  flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 100%;
+  padding: 1rem;
+  animation: float 3s linear infinite;
+}
+.heading {
+  text-align: center;
+  font-size: 3.5rem;
+  padding: 1rem;
+  color: orange;
+}
+
+.heading span {
+  color: orange;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0rem);
+  }
+  50% {
+    transform: translateY(3rem);
+  }
+}
+
+.home .content h3 {
+  font-size: 5rem;
+  /* color:#333; */
+  color: orange;
+}
+.home .content h3 :hover {
+  color: white;
+}
+
+.home .content p {
+  font-size: 1.7rem;
+  color: white;
+  padding: 1rem 0;
+}
+
+.review .row {
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.review .row .image {
+  flex: 1 1 30rem;
+  background-color: black;
+}
+
+.review.row .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.review .row form {
+  flex: 1 1 50rem;
+  padding: 1rem;
+}
+
+.review .row form .inputBox {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.review .row form .inputBox :hover {
+  color: #000;
+}
+
+.review .row form .inputBox input,
+.review .row form textarea {
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.7rem;
+  color: #333;
+  text-transform: none;
+  border: 0.1rem solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  width: 49%;
+}
+
+.review .row form textarea {
+  width: 100%;
+  resize: none;
+  height: 15rem;
+}
+
+.review .row form .btn {
+  background: none;
+}
+
+.review .row form .btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+#scroll-top {
+  position: fixed;
+  top: -120%;
+  right: 2rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 4rem;
+  background: var(--red);
+  color: #fff;
+  border-radius: 0.5rem;
+  transition: 1s linear;
+  z-index: 1000;
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  header {
+    padding: 2rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-bar {
+    display: initial;
+  }
+
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #f7f7f7;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+
+  header .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  header .navbar a {
+    margin: 1.5rem;
+    padding: 1.5rem;
+    display: block;
+    border: 0.2rem solid rgba(0, 0, 0, 0.1);
+    border-left: 0.5rem solid var(--red);
+    background: #fff;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .review .row form .inputBox input {
+    width: 100%;
+  }
+}
